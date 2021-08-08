@@ -1,0 +1,198 @@
+#init {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--black);
+    color: var(--pure);
+    font-size: var(--size);
+    position: relative;
+    overflow: hidden;
+}
+
+#init svg {
+    width: 3rem;
+    position: sticky;
+    font-size: var(--size);
+    margin-top: -.8rem;
+    padding-left: 1rem;
+    animation: fill 0.5s ease forwards 3s;
+    -webkit-animation: fill 0.5s ease forwards 3s;
+    -moz-animation: fill 0.5s ease forwards 3s;
+    opacity: .8;
+}
+
+#logo path:nth-child(1) {
+    stroke-dasharray: 448;
+    stroke-dashoffset: 448;
+
+    animation: line-anim 3s ease forwards 0.3s;
+}
+
+#init .navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 1rem;
+    font-size: var(--size);
+    font-family: 'Girassol';
+}
+
+#init .navigation ul {
+    display: flex;
+    padding-top: .3rem;
+}
+
+#init .navigation ul li {
+    list-style: none;
+    margin-right: 4.5rem;
+    color: var(--light);
+    cursor: pointer;
+    transform-origin: center;
+}
+
+#init .navigation ul li a {
+    transition: .3 all ease;
+}
+
+.hover-line::after {
+    content: '';
+    display: block;
+    width: 0%;
+    height: 2px;
+    background-color: var(--pure);
+    transition: width .3s;
+
+}
+
+.hover-line:hover::after {
+
+    width: 100%;
+}
+
+#init .center-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: default;
+    transition: all ease;
+    line-height: 1.3;
+}
+
+#init .center-box h2 {
+    font-family: 'Merriweather';
+    font-size: var(--xl-size);
+    color: var(--grey);
+    opacity: .7;
+}
+
+/* #init .center-box h6 {
+    font
+    } */
+#init .center-box p {
+    margin-top: 1rem;
+    font-size: .8rem;
+    color: var(--light);
+    animation: youdo 2.5s ease infinite;
+    -webkit-animation: youdo 2.5s ease infinite;
+    -moz-animation: youdo 2.5s ease infinite;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#init .email {
+    position: fixed;
+    top: 76%;
+    margin-left: -3rem;
+    transform: rotate(270deg);
+    font-size: var(--smSize);
+    z-index: 1;
+    cursor: pointer;
+    color: gray;
+
+}
+
+#init .email p {
+    font-weight: 600;
+}
+
+#init .email1 {
+    position: fixed;
+    top: 24%;
+    left: 92%;
+    transform: rotate(270deg);
+    font-size: var(--smSize);
+    cursor: pointer;
+    color: gray;
+    z-index: 1;
+}
+
+#init .email1 p {
+    font-weight: 600;
+}
+
+#init .center-box .textAnim {
+    font-size: var(--lgSize);
+    font-family: 'Merriweather';
+}
+
+section #logosvg {
+    position: absolute;
+    left: 35%;
+    transform: translateX(-50%);
+    top: 75%;
+}
+
+#init #linesvg {
+    position: absolute;
+    top: 100%;
+    left: 49.45%;
+    transform: translate(-50%, -50%);
+    animation: linesvg 5s ease;
+    -webkit-animation: linesvg 5s ease;
+    -moz-animation: linesvg 5s ease;
+}
+
+
+
+@keyframes youdo {
+    0% {
+        opacity: 0;
+
+    }
+
+    100% {
+        opacity: 1;
+
+    }
+}
+
+@keyframes line-anim {
+    to {
+        stroke-dasharray: 0;
+    }
+}
+
+@keyframes fill {
+    from {
+        fill: transparent;
+    }
+
+    to {
+        fill: var(--light);
+    }
+}
+
+@keyframes linesvg {
+    from {
+        opacity: .5;
+        height: 0;
+    }
+
+    to {
+        opacity: 1;
+        height: 270;
+    }
+}
